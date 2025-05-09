@@ -1,0 +1,15 @@
+{
+  "originHash" : "d6f8b9fdad025017369d012786f33a275c985d09b9a3afcc3a88327d14bce45f",
+  "pins" : [
+    {
+      "identity" : "swiftbox2d",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/LuizZak/SwiftBox2D.git",
+      "state" : {
+        "branch" : "e615461",
+        "revision" : "e615461ffe7958625de4121d73fb2aa640114937"
+      }
+    }
+  ],
+  "version" : 3
+}

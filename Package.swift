@@ -1,24 +1,19 @@
-// swift-tools-version: 6.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version: 5.10
 import PackageDescription
 
 let package = Package(
-    name: "CUndefinedSymbol",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "CUndefinedSymbol",
-            targets: ["CUndefinedSymbol"]),
+    name: "CUndefinedSymbolUser",
+    dependencies: [
+        .package(name: "CUndefinedSymbol", path: "Dependencies"),
+        .package(url: "https://github.com/LuizZak/SwiftBox2D.git", revision: "e615461"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "CUndefinedSymbol"),
-        .testTarget(
-            name: "CUndefinedSymbolTests",
-            dependencies: ["CUndefinedSymbol"]
+        .executableTarget(
+            name: "CUndefinedSymbolUser",
+            dependencies: [
+                .product(name: "SwiftBox2D", package: "SwiftBox2D"),
+                .product(name: "CUndefinedSymbol", package: "CUndefinedSymbol"),
+            ]
         ),
     ]
 )
