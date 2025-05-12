@@ -1,0 +1,14 @@
+{
+    "mypy.configFile": "utils/mypy.ini",
+    "mypy.targets": [
+        "utils",
+    ],
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/generate_types.jsonc"
+            ],
+            "url": "./utils/generate_types.schema.json",
+        }
+    ]
+}

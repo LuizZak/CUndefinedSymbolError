@@ -1,0 +1,75 @@
+{
+    "declarations": {
+        "prefixes": ["b2_", "b2"],
+        "symbolCasing": {
+            "enums": "camelCase",
+            "enumMembers": "mixed_Case",
+            "structs": "camelCase",
+            "functions": "camelCase"
+        },
+        "swiftSymbolFormatting": {
+            "symbolCasing": {
+                "enums": "PascalCase",
+                "enumMembers": "camelCase",
+                "structs": "PascalCase",
+                "functions": "camelCase"
+            },
+            "capitalizeTerms": ["AABB"],
+            "patternsToSplit": [],
+            "snakeCaseAfterTerms": []
+        },
+        "autoProperty": true,
+        "functionsToMethods": [
+            { "cPrefix": "b2World_", "swiftType": "B2World", "param0": { "swiftName": "id", "type": "b2WorldId" } },
+            { "cPrefix": "b2Body_", "swiftType": "B2Body", "param0": { "swiftName": "id", "type": "b2BodyId" } },
+            { "cPrefix": "b2Joint_", "swiftType": "B2Joint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2DistanceJoint_", "swiftType": "B2DistanceJoint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2MotorJoint_", "swiftType": "B2MotorJoint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2MouseJoint_", "swiftType": "B2MouseJoint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2PrismaticJoint_", "swiftType": "B2PrismaticJoint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2RevoluteJoint_", "swiftType": "B2RevoluteJoint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2WeldJoint_", "swiftType": "B2WeldJoint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2WheelJoint_", "swiftType": "B2WheelJoint", "param0": { "swiftName": "id", "type": "b2JointId" } },
+            { "cPrefix": "b2Shape_", "swiftType": "B2Shape", "param0": { "swiftName": "id", "type": "b2ShapeId" } },
+            { "cPrefix": "b2Chain_", "swiftType": "B2Chain", "param0": { "swiftName": "id", "type": "b2ChainId" } }
+        ],
+        "conformances": [
+            { "cName": "b2QueryFilter", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            // Geometry types
+            { "cName": "b2Vec2", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            { "cName": "b2Circle", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            { "cName": "b2Capsule", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            { "cName": "b2Segment", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            { "cName": "b2Polygon", "conformances": ["CustomStringConvertible"] },
+            { "cName": "b2AABB", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            { "cName": "b2Rot", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            { "cName": "b2Transform", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] },
+            { "cName": "b2Mat22", "conformances": ["Equatable", "Hashable", "CustomStringConvertible"] }
+        ],
+        "filters": {
+            "enums": ["b2BodyType", "b2ShapeType", "b2JointType", "b2HexColor"],
+            "enumMembers": ["."],
+            "structs": ["."],
+            "methods": ["."]
+        }
+    },
+    "docComments": {
+        "collect": true,
+        "format": true
+    },
+    "fileGeneration": {
+        "targetPath": "Sources/SwiftBox2D/Generated",
+        "globalFileSuffix": "+Ext",
+        "imports": ["box2d"],
+        "directoryStructure": [
+            {
+                "path": "Geometry",
+                "match": [
+                    "B2Vec2+Ext.swift", "B2Circle+Ext.swift", "B2AABB+Ext.swift", "B2Rot+Ext.swift",
+                    "B2Transform+Ext.swift", "B2Mat22+Ext.swift"
+                ]
+            },
+            { "path": "Joints", "match": [ "/B2(\\w+)Joint.+/" ] }
+        ]
+    }
+}
