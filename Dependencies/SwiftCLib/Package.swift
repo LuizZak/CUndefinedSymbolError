@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "SwiftCLib",
             dependencies: [
-                "CLibrary",
+                //"CLibrary",
             ]
         ),
         .testTarget(

@@ -1,4 +1,4 @@
-import CLibrary
+//import CLibrary
 
 extension cSymbol: @retroactive Equatable {
     public static func == (lhs: Self, rhs: Self) -> Bool {
