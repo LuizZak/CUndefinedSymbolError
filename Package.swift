@@ -1,18 +1,16 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 import PackageDescription
 
 let package = Package(
     name: "CUndefinedSymbolUser",
     dependencies: [
-        .package(name: "CUndefinedSymbol", path: "Dependencies/CUndefinedSymbol"),
-        //.package(name: "SwiftBox2D", path: "Dependencies/SwiftBox2D"),
+        .package(name: "SwiftCLib", path: "Dependencies/SwiftCLib"),
     ],
     targets: [
         .executableTarget(
             name: "CUndefinedSymbolUser",
             dependencies: [
-                .product(name: "CUndefinedSymbol", package: "CUndefinedSymbol"),
-                //.product(name: "SwiftBox2D", package: "SwiftBox2D"),
+                .product(name: "SwiftCLib", package: "SwiftCLib"),
             ]
         ),
     ]

@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift-lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:CUndefinedSymbol}",
+            "name": "Debug CUndefinedSymbolUser",
+            "program": "${workspaceFolder:CUndefinedSymbol}/.build/debug/CUndefinedSymbolUser",
+            "preLaunchTask": "swift: Build Debug CUndefinedSymbolUser"
+        },
+        {
+            "type": "swift-lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:CUndefinedSymbol}",
+            "name": "Release CUndefinedSymbolUser",
+            "program": "${workspaceFolder:CUndefinedSymbol}/.build/release/CUndefinedSymbolUser",
+            "preLaunchTask": "swift: Build Release CUndefinedSymbolUser"
+        }
+    ]
+}

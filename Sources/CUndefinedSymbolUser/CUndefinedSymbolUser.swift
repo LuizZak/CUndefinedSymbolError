@@ -1,10 +1,5 @@
-import CUndefinedSymbol
-//import SwiftBox2D
+import SwiftCLib
 
 func test() {
-    exported()
-
-    var vec = b2Vec2.zero
-
-    vec = vec / 2
+    exported(symbol: CSymbol(field0: 1) + CSymbol(field0: 2))
 }
